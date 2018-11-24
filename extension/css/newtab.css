@@ -1,0 +1,89 @@
+@font-face {
+	font-family: 'Radiance';
+	src: url('/css/fonts/Radiance-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+    min-height: 100%;
+
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-image: url('/img/deck_list_fullbg.png');
+}
+
+.card-container {
+    position: absolute;
+    top:50%;
+    left:50%;
+
+    perspective: 1000px;
+}
+
+.card {
+    display: none;
+    margin: 20px;
+    width: 250px;
+    height: 424px;
+
+    background-size: contain;
+    background-color: #fff;
+
+    border-width: 4px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 14px;
+
+    transition: transform 100ms cubic-bezier(.03,.98,.52,.99);
+}
+
+.abilities {
+    position: absolute;
+    bottom: 100px;
+}
+
+.ability {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.ability-info {
+    position: absolute;
+    bottom: calc(100% + 10px);
+
+    width: 214px;
+    background: #000000d6;
+    padding: 10px;
+    border-radius: 6px;
+
+    font-family: "Radiance", sans-serif;
+    color: #ccc;
+
+    transition: all 250ms ease-in;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ability:hover .ability-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ability-name {
+    font-size: 20px;
+}
+
+.ability-type {
+    font-size: 12px;
+}
+
+.ability-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
