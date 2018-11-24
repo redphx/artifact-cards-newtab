@@ -19,7 +19,7 @@ html {
     position: absolute;
     top:50%;
     left:50%;
-
+    height: 478px;
     perspective: 1000px;
 }
 
